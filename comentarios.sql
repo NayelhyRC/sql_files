@@ -20,13 +20,14 @@ Nombre: autores*/
 /*TIP: todas nuestras tablas deben poseer campos que nos permitan saber
 cuando fue creado un registro*/
 comandos:
-- SELECT current_timestamp;(es para obtener la fecha exacta)
-- UNSIGNED: para no permitir números negativos
+- SELECT current_timestamp;--es para obtener la fecha exacta)
+- UNSIGNED;-- para no permitir números negativos
 
 +TIPO ENUM
 
 +integridad referencial
 
+#UNIQUE
 Como sabemos, si nosotros necesitamos validar valores únicos usaremos el constraint UNIQUE.
 CREATE TABLE usuarios( 
   usuario_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -38,12 +39,10 @@ CREATE TABLE usuarios(
   nombre VARCHAR(50),
   CONSTRAINT UNIQUE (nombre)
 );
-La palabra CONSTRAINT es opcional, sin embargo, por temas de legibilidad recomiendo colocarla.
+La palabra CONSTRAINT es opcional, sin embargo, por temas de legibilidad se recomienda colocarla.
 
-
-VALORES MÚTIPLES COLUMNAS
+#VALORES MÚTIPLES COLUMNAS
 Si necesitamos validar el valor único de una combinación de columnas lo haremos de la siguiente manera.
-
 En este caso queremos validar que la combinación de nombre, apellido y matricula sean unicas en la tabla.
 
 CREATE TABLE usuarios( 
@@ -55,6 +54,7 @@ CREATE TABLE usuarios(
   PRIMARY KEY (usuario_id)
 );
 
+#COLUMNAS: añadir, default value, drop
 -mysql> ALTER TABLE libros ADD ventas INT UNISGNED NOT NULL;(para añadir una columna a la tabla )
 -mysql> ALTER TABLE libros ADD stock INT UNSIGNED NOT NULL DEFAULT 10; (he puesto el valor 10 por defecto)
 -mysql> ALTER TABLE libros DROP COLUMN stock;(para eliminar una columna)
