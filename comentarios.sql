@@ -1,13 +1,13 @@
 /*¿Qué tipo de entidades? Autores
-Nombre: autores
-comandos: 
-- USE DATABASE libreria_cf;(solo el nombre de la librería)
+Nombre: autores*/
+#comandos: 
+- USE DATABASE libreria_cf;--solo el nombre de la librería)
 - SHOW DATABASES;
 - SHOW TABLES;
-- SELECT * FROM autores; (para obtener todos los registros de una tabla)
+- SELECT * FROM autores; --para obtener todos los registros de una tabla)
 - DESC libros; -->es para mostrar la tabla "libros"
 - ALTER TABLE libros ADD ventas INT UNSIGNED NOT NULL;(para añadir una columna)
-- " DEFAULT 10(hará que todos tengan 10 ventas)
+- " DEFAULT 10";--hará que todos tengan 10 ventas)
 - ALTER TABLE libros DROP COLUMN stock;
 - SELECT libro_id, titulo FROM libros;
 - SELECT * FROM libros\G;
@@ -16,9 +16,7 @@ comandos:
 - SELECT * FROM libros WHERE (autor_id=1 AND titulo = "Carrie") OR (autor_id = 3 AND titulo= "hola");
 - SELECT * FROM autores WHERE seudonimo IS NULL;
 - SELECT * FROM autores WHERE seudonimo <=> NULL;
-- 
-*/
-/esta prueba para git
+
 /*TIP: todas nuestras tablas deben poseer campos que nos permitan saber
 cuando fue creado un registro*/
 comandos:
