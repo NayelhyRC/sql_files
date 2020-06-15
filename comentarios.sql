@@ -59,7 +59,7 @@ CREATE TABLE usuarios(
 -mysql> ALTER TABLE libros ADD stock INT UNSIGNED NOT NULL DEFAULT 10; (he puesto el valor 10 por defecto)
 -mysql> ALTER TABLE libros DROP COLUMN stock;(para eliminar una columna)
 
-SENTENCIAS CON CONDICIONES:
+#SENTENCIAS CON CONDICIONES:
 - <
 - >
 - != <>   (para representar diferente)
