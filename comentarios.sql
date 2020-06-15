@@ -18,7 +18,7 @@ comandos:
 - SELECT * FROM autores WHERE seudonimo <=> NULL;
 - 
 */
-
+/esta prueba para git
 /*TIP: todas nuestras tablas deben poseer campos que nos permitan saber
 cuando fue creado un registro*/
 comandos:
